@@ -1,12 +1,11 @@
 package com.storage.utils;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 
 /**
@@ -148,13 +147,12 @@ public final class CookieUtils {
 			if (cookieMaxage > 0) {
 				cookie.setMaxAge(cookieMaxage);
 			}
-			if (request!=null ) {// 设置域名的cookie
+			/*if (request!=null ) {// 设置域名的cookie
 				String domainName = getDomainName(request);
-				System.out.println(domainName);
 				if (!"localhost".equals(domainName)) {
 					cookie.setDomain(domainName);
 				}
-			}
+			}*/
 			cookie.setPath("/");
 			response.addCookie(cookie);
 		} catch (Exception e) {
@@ -179,13 +177,12 @@ public final class CookieUtils {
 			if (cookieMaxage > 0) {
 				cookie.setMaxAge(cookieMaxage);
 			}
-			if (null != request) {// 设置域名的cookie
+			/*if (null != request) {// 设置域名的cookie
 				String domainName = getDomainName(request);
-				System.out.println(domainName);
 				if (!"localhost".equals(domainName)) {
 					cookie.setDomain(domainName);
 				}
-			}
+			}*/
 			cookie.setPath("/");
 			response.addCookie(cookie);
 		} catch (Exception e) {
